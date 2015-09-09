@@ -8,8 +8,9 @@ index f055505..f80ca6b 100644
  
 +        /* Migrate Tur Forlag Question Images
 +         * NB. Ensure $CFG->turimage is defined correctly in config.php
++         * NB. Ensure $CFG->olddataroot is included in config.php -> use dataroot value from 1.9 config.php
 +         */
-+        $imagefolder = $CFG->dataroot . '/' . $CFG->turimage . '/image/';
++        $imagefolder = $CFG->olddataroot . '/' . $CFG->turimage . '/image/';
 +        $tfadminid = 2;
 +        $tfadmindetails = $DB->get_records_list('user', 'id', array($tfadminid),
 +                null, 'id, firstname, lastname');
